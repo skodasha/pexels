@@ -1,0 +1,117 @@
+.header{
+    position: relative;
+    height: 500px; 
+    z-index: 1;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header-background{
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+.img-back{
+    width: 1280px;
+}
+
+.header-title{
+    position: relative;
+    color: white;
+    font-size: 20px;
+    z-index: 2;
+    width: 570px;
+    margin: 0 auto;
+    padding-top: 150px;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+.search{
+    z-index: 2;
+    position: relative;
+    display: flex;
+    width: 570px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.input{
+    height: 56px;
+    padding-left: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px 5px 5px 5px;
+    outline: none;
+    font-size: 15px;
+}
+
+.search-button{
+    position: relative;
+    top: 19px;
+    right: 38px;
+    height: 18px;
+    width: 18px;
+    position: relative;
+    border: none;
+    border-radius: 5px 5px 5px 5px;
+    background-color: white;
+    background-image: url('../pictures/search.png');
+    outline: none;
+}
+
+
+.author{
+    position: relative;
+    text-align: end;
+    margin-top: 110px;
+    padding-right: 20px;
+    z-index: 2;
+}
+
+.author > a{
+    font-size: 12px;
+    color: white;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.author > a:hover{
+    opacity: 1;
+    text-decoration: none;
+    color: white;
+}
+
+.hints{
+    position: relative;
+    display: flex;
+    width: 570px;
+    color: white;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.categories{
+    list-style: none;
+    padding: 0px;
+    padding-top: 3px;
+}
+
+.categories > li{
+    display: inline;
+    margin-left: 7px;
+}
+
+.categories > li > a{
+    padding: 0;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    opacity: 0.5;
+}
+
+.categories > li > a:hover{
+    opacity: 1;
+}

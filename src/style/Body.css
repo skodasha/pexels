@@ -1,0 +1,102 @@
+body {
+  font-size: 10px;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 200px;
+}
+
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.photo-block {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.photo {
+  position: relative;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.photo-info{
+  position: absolute;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0px 20px 10px 20px;
+  width: 330px;
+  height: 100px;
+  bottom: 0px;
+  background: linear-gradient(#1f1f1f00, #1f1f1f77);
+  display: none;
+}
+
+.button-like{
+  background-color: transparent;
+  color: white;
+  font-size: 30px;
+  border: none;
+  opacity: 0.5;
+  margin-top: 10px;
+  outline: none;
+}
+
+.button-like:hover{
+  opacity: 1;
+}
+
+.name{
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  padding-bottom: 10px;
+}
+
+.photo:hover .photo-info{
+  display: flex;
+}
+
+.photo > img {
+  width: 370px;
+}
+
+.scroll{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*----------- tablet ------------*/
+@media screen and (min-width: 1120px) and (max-width: 1680px) {
+  .photo {
+    margin: 25px;
+  }
+
+  .photo > a > img {
+    width: 400px;
+  }
+}
+
+/*----------- mobile ------------*/
+@media screen and (max-width: 1120px) {
+  .photo {
+    margin: 20px;
+  }
+
+  .photo > a > img {
+    width: 300px;
+  }
+}

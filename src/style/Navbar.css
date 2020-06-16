@@ -1,0 +1,64 @@
+.nav-default{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    z-index: 3;
+}
+
+.top{
+    background-color: #232a34;
+}
+
+.nav-logo{
+    margin: 15px;
+    width: 40px;
+    height: 40px;
+}
+
+.nav-title{
+    color: white;
+    margin-top: 20px;
+}
+
+.nav-search{
+    visibility: hidden;
+    position: relative;
+    display: flex;
+    width: 85%;
+    height: 40px;
+    margin-top: 15px;
+    margin-right: 3%;
+    margin-left: 1%;
+}
+
+.not-hidden{
+    visibility: visible;
+}
+
+.nav-input{
+    height: 40px;
+    padding-left: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px 5px 5px 5px;
+    outline: none;
+    font-size: 12px;
+    background-color: #4b5461;
+    color: white;
+}
+
+.nav-button{
+    position: relative;
+    top: 13px;
+    right: 38px;
+    height: 18px;
+    width: 18px;
+    position: relative;
+    border: none;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #4b5461;
+    background-image: url('../pictures/search.png');
+    outline: none;
+}
