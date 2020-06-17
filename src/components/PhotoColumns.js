@@ -10,7 +10,15 @@ function PhotoColumns(props) {
     } else if (props.width < 600) {
         numberOfColumns = 1;
     }
-    //❤🧡🤍♡
+    
+    const likeClick = (item) => {
+        let index = likedPhotos.indexOf(item.id) 
+        index === -1 ? likedPhotos.push(item.id) : likedPhotos.splice(index, 1);
+        localStorage.setItem('likes', JSON.stringify(likedPhotos))
+        props.updatePhoto(item, props.photos)
+    }
+
+    let likedPhotos = JSON.parse(localStorage.getItem('likes'))
     let photos = [];
     for (let i = 0; i < numberOfColumns; i++) {
         let n = 0;
@@ -20,10 +28,10 @@ function PhotoColumns(props) {
                 <div className='photo-info'>
                     <a href={ item.photographer_url } target="_blank" className='name'>{ item.photographer}</a>   
                     <button className='button-like' onClick={ (e) => {
-                        props.updatePhoto(item, photos)
+                        likeClick(item)
                     }}>
                     {
-                        item.liked ? <div>🧡</div>: <div>🤍</div>
+                        likedPhotos.includes(item.id) ? <div>🧡</div>: <div>🤍</div>
                     }
                     </button>
                 </div>

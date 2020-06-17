@@ -1,5 +1,5 @@
 import React from 'react';
-
+import $ from 'jquery';
 import './App.css';
 
 import Header from './components/Header';
