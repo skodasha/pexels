@@ -3,6 +3,7 @@ import { createClient } from 'pexels';
 
 import '../style/Header.css';
 import back from '../pictures/back.png';
+import Input from './Input';
 
 function Header () {
     const client = createClient(process.env.REACT_APP_ACCESS_KEY);
@@ -36,19 +37,16 @@ function Header () {
                 <img className='img-back' src={ backgroundURL } alt='back'></img>
             </div>
             <h1 className='header-title'>The best free stock photos shared by <br/> talent photographers.</h1>
-            <div className='search'>
-                <input className='input' placeholder='Search for free photos and videos'/>
-                <button className='search-button'/>
-            </div>
+            <Input style={'search'}/>
             <div className='hints'>
                 <h2>Suggested: </h2>
                 <ul className='categories'>
                     {
                         categories.sort(shuffleArr).slice(0,COUNT_CATEGORIES).map( (item, index) => {
                             if(index == COUNT_CATEGORIES - 1)
-                                return <li><a href='#'>{ item }</a></li>
+                                return <li><a href={`/search?search=${item}`}>{ item }</a></li>
                             
-                            return <li><a href='#'>{ item },</a></li>
+                            return <li><a href={`/search?search=${item}`}>{ item },</a></li>
                         })
                     }
                 </ul>

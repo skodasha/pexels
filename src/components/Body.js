@@ -7,9 +7,9 @@ import '../style/Body.css';
 import PhotoColumns from './PhotoColumns';
 import Loader from './Loader';
 
-import { fetchPhotos, addPhotos } from '../store/store';
+import { addPhotos } from '../store/store';
 
-function Body({ fetchPhotos, photos, addPhotos }) {
+function Body({ photos, addPhotos, search }) {
     const getWindowDimensions = () => {
         const { innerWidth: width, innerHeight: height } = window;
         return { width, height }
@@ -20,7 +20,7 @@ function Body({ fetchPhotos, photos, addPhotos }) {
 
     const nextPhotos = () => {
         setPage(page + 1);
-        addPhotos(page);
+        addPhotos(page, search);
     };
 
     useEffect(() => {
@@ -42,7 +42,9 @@ function Body({ fetchPhotos, photos, addPhotos }) {
     return (
         <div className='app'>
             {
-                (photos.length === 0)
+                (photos.length === 0 && search)
+                ? <div className='not'>Nothing not found.</div>
+                : (photos.length === 0)
                 ? <Loader/>
                 : <InfiniteScroll
                     dataLength={ photos.length } 
@@ -58,6 +60,7 @@ function Body({ fetchPhotos, photos, addPhotos }) {
 
                     <PhotoColumns width={ windowDimensions.width } photos={ photos }/>
                 </InfiniteScroll>
+                
             }
         </div>
     );
@@ -68,7 +71,6 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-    fetchPhotos,
     addPhotos,
 };
 

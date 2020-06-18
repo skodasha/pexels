@@ -3,6 +3,7 @@ import $ from 'jquery';
 
 import '../style/Navbar.css';
 import logo from '../pictures/logo.png';
+import Input from '../components/Input';
 
 function Navbar() {
     $(window).on('scroll', function() {
@@ -20,10 +21,7 @@ function Navbar() {
         <div className='nav-default'>
             <img src={logo} className='nav-logo'/>
             <h1 className='nav-title'>Pexels</h1>
-            <div className='nav-search'>
-                <input className='nav-input' placeholder="Search for free photos and videos"/>
-                <button className='nav-button'/>
-            </div>
+            <Input style={'nav-search'}/>
         </div>
     )
 }

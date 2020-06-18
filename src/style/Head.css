@@ -1,0 +1,12 @@
+.head{
+    height: 160px;
+    position: relative;
+    border: 1px solid white;
+}
+
+.head > h1{
+    font-size: 30px;
+    color: grey;
+    margin: 100px auto;
+    text-align: center;
+}

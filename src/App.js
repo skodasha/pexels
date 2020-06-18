@@ -1,18 +1,18 @@
 import React from 'react';
-import $ from 'jquery';
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Categories from './pages/Categories';
+import Main from './pages/Main';
 
-import Header from './components/Header';
-import Body from './components/Body';
-import Navbar from './components/Navbar';
 
 function App() {
     return(
-        <div>
-            <Navbar/>
-            <Header/>
-            <Body/>
-        </div>
+        <Router>
+            <Switch>
+                <Route path='/search' exact component={Categories}/>
+                <Route path='/' exact component={Main}/>
+            </Switch>   
+        </Router>
     )
 }
 

@@ -79,6 +79,11 @@ img {
   align-items: center;
 }
 
+.not{
+  color: grey;
+  font-size: 20px;
+}
+
 /*----------- tablet ------------*/
 @media screen and (min-width: 1120px) and (max-width: 1680px) {
   .photo {

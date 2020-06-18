@@ -1,5 +1,5 @@
 import getPhotos from './api';
-import { applyMiddleware, createStore } from 'redux';
+import { applyMiddleware, createStore, combineReducers } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
 const ADD_PHOTO = 'ADD_PHOTO';
@@ -28,9 +28,9 @@ export function showPhotos (photos) {
     }
 }
 
-export function fetchPhotos (page) { 
+export function fetchPhotos (page, search) { 
 	return (dispatch) => {
-		getPhotos(page).then((res) => {
+		getPhotos(page, search).then((res) => {
             dispatch(showPhotos(res.photos));          
         });
 	} 
@@ -43,9 +43,9 @@ export function addToStore(photos) {
 	}
 }
 
-export function addPhotos (page) {
+export function addPhotos (page, search) {
     return (dispatch) => {
-		getPhotos(page).then((res) => {
+		getPhotos(page, search).then((res) => {
             dispatch(addToStore(res.photos))
         });
 	}

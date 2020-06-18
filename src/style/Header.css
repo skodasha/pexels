@@ -38,7 +38,7 @@
     margin: 0 auto;
 }
 
-.input{
+.search > input{
     height: 56px;
     padding-left: 10px;
     width: 100%;
@@ -48,7 +48,7 @@
     font-size: 15px;
 }
 
-.search-button{
+.search > a > button {
     position: relative;
     top: 19px;
     right: 38px;
@@ -61,7 +61,6 @@
     background-image: url('../pictures/search.png');
     outline: none;
 }
-
 
 .author{
     position: relative;
