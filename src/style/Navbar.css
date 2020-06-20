@@ -24,7 +24,6 @@
 
 .nav-search{
     visibility: hidden;
-    position: relative;
     display: flex;
     width: 85%;
     height: 40px;

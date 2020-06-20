@@ -42,9 +42,7 @@ function Body({ photos, addPhotos, search }) {
     return (
         <div className='app'>
             {
-                (photos.length === 0 && search)
-                ? <div className='not'>Nothing not found.</div>
-                : (photos.length === 0)
+                (photos.length === 0)
                 ? <Loader/>
                 : <InfiniteScroll
                     dataLength={ photos.length } 

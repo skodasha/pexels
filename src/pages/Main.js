@@ -1,5 +1,6 @@
 import React from 'react';
-
+import '../App.css';
+import '../style/Modal.css'
 import Header from '../components/Header';
 import Body from '../components/Body';
 import Navbar from '../components/Navbar';
@@ -7,9 +8,9 @@ import Navbar from '../components/Navbar';
 function Main() {
     return(
         <div>    
-            <Navbar/>
+            <Navbar/>    
             <Header/>
-            <Body search={''}/>
+            <Body search={''}/>      
         </div>
     )
 }

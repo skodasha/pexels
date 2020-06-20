@@ -1,5 +1,4 @@
 .header{
-    position: relative;
     height: 500px; 
     z-index: 1;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -8,7 +7,7 @@
 .header-background{
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: 500px;
     overflow: hidden;
     position: absolute;
 }
@@ -21,7 +20,7 @@
     position: relative;
     color: white;
     font-size: 20px;
-    z-index: 2;
+   
     width: 570px;
     margin: 0 auto;
     padding-top: 150px;
@@ -30,7 +29,6 @@
 }
 
 .search{
-    z-index: 2;
     position: relative;
     display: flex;
     width: 570px;
@@ -54,7 +52,6 @@
     right: 38px;
     height: 18px;
     width: 18px;
-    position: relative;
     border: none;
     border-radius: 5px 5px 5px 5px;
     background-color: white;
@@ -89,7 +86,6 @@
     width: 570px;
     color: white;
     margin: 0 auto;
-    z-index: 2;
 }
 
 .categories{

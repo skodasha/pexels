@@ -1,0 +1,32 @@
+#modal{
+    z-index: 0;
+    width: max-content;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.image{
+  height: 100%;
+  width: auto;
+  float: left;
+}
+
+.buttons{
+    width: 200px;
+    float: right;
+}
+
+.closeButton{
+    position: fixed;
+    top: 20%;
+    right: inherit;
+    outline: none;
+    width: 30px;
+    height: 30px;
+    border: none;
+    font-size: 22px;
+    background-color: transparent;
+}

@@ -30,6 +30,9 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  border: none;
+  padding: 0;
+  outline: none;
 }
 
 .photo-info{
