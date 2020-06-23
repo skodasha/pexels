@@ -33,7 +33,7 @@ function PhotoColumns(props) {
         props.updatePhoto(item, props.photos)
     }
 
-    let likedPhotos = JSON.parse(localStorage.getItem('likes'))
+    let likedPhotos = JSON.parse(localStorage.getItem('likes')) || []
     let photos = [];
     for (let i = 0; i < numberOfColumns; i++) {
         let n = 0;
