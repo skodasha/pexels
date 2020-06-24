@@ -5,10 +5,13 @@ import '../App.css';
 import { connect } from 'react-redux';
 import { updatePhoto } from '../store/store';
 import Modal from 'react-modal';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { ButtonGroup, DropdownButton, Button, Form } from 'react-bootstrap';
 
 function PhotoColumns(props) {
     const [isOpen, setIsOpen] = useState(false);
-    const [item, setItem] = useState({src: '', id: ''})
+    const [item, setItem] = useState({src: '', id: ''});
+    const [sizePhoto, setSizePhoto] = useState();
 
     function closeModal(){
         setIsOpen(false);
@@ -54,7 +57,7 @@ function PhotoColumns(props) {
         );
         photos.push(<div className='photo-block'>{ photoElements }</div>);
     }
-    
+
     return (
         <div className='photos'>
             {photos}
@@ -67,10 +70,22 @@ function PhotoColumns(props) {
             >
             <img src={item.src.large2x} className='image'/>
             <div className='buttons'>
-                <button className='' onClick={ (e) => {}}>free download</button>
+                <ButtonGroup>
+                    <Button className='download-button'><a href={`https://www.pexels.com/photo/${item.id}/download/`} download
+                    className='link'>free download</a></Button>
+                    <DropdownButton id='drop-button' as={ButtonGroup}>
+                        <h4 className='label'>Choose a size:</h4>
+                        <Form.Check type="radio" label="Original" className='dropdown-item' checked name='size' onChange={e => setSizePhoto(item.height)}/>
+                        <Form.Check type="radio" label="Large" className='dropdown-item' name='size' onChange={e => setSizePhoto(item.height / 3.25)}/>
+                        <Form.Check type="radio" label="Medium" className='dropdown-item' name='size' onChange={e => setSizePhoto(item.height / 4.875)}/>
+                        <Form.Check type="radio" label="Small"  className='dropdown-item' name='size' onChange={e => setSizePhoto(item.height / 10)}/>
+                        <Button className='dropdown-download-button'><a href={`https://www.pexels.com/photo/${item.id}/download/?h=${sizePhoto}`} 
+                        download className='link'>free download</a></Button>
+                    </DropdownButton>
+                </ButtonGroup>
                 <br/>
                 <button className='button-like' onClick={ (e) => {
-                        likeClick(item)
+                    likeClick(item)
                 }}>
                 {
                     likedPhotos.includes(item.id) ? <div>🧡</div>: <div>🤍</div>
@@ -95,3 +110,4 @@ export default connect(
 	mapStateToProps,
 	mapDispatchToProps,
 )(PhotoColumns);
+

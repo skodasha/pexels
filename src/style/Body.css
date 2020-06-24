@@ -1,3 +1,4 @@
+
 body {
   font-size: 10px;
 }
@@ -32,7 +33,7 @@ img {
   align-items: flex-end;
   border: none;
   padding: 0;
-  outline: none;
+  outline: none !important;
 }
 
 .photo-info{
@@ -40,7 +41,7 @@ img {
   align-items: flex-end;
   justify-content: space-between;
   padding: 0px 20px 10px 20px;
-  width: 330px;
+  width: 370px;
   height: 100px;
   bottom: 0px;
   background: linear-gradient(#1f1f1f00, #1f1f1f77);
@@ -54,7 +55,7 @@ img {
   border: none;
   opacity: 0.5;
   margin-top: 10px;
-  outline: none;
+  outline: none !important;
 }
 
 .button-like:hover{
@@ -66,6 +67,13 @@ img {
   font-size: 16px;
   text-decoration: none;
   padding-bottom: 10px;
+  opacity: 0.5;
+}
+
+.name:hover{
+  text-decoration: none;
+  color: white;   
+  opacity: 1;
 }
 
 .photo:hover .photo-info{

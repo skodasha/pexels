@@ -23,10 +23,55 @@
     position: fixed;
     top: 20%;
     right: inherit;
-    outline: none;
+    outline: none !important;
     width: 30px;
     height: 30px;
     border: none;
     font-size: 22px;
     background-color: transparent;
 }
+
+.download-button{
+    width: 160px;
+    height: 40px;
+    background-color:#05a081 !important;
+    border: none !important;
+}
+
+#drop-button{
+    background:#05a081 !important;
+    border: none !important;
+}
+
+.label{
+    color: rgb(150, 150, 150);
+    margin: 10px;
+}
+
+.download-button:hover, #drop-button:hover{
+    background-color:#13e0b7 !important;
+}
+  
+  .link{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .link:hover{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .dropdown-item{
+    width: 150px !important;  
+    height: 30px;
+    margin: 10px !important;
+  }
+
+  .dropdown-download-button{
+    margin: 5px;
+    width: 160px;
+    height: 30px;
+    background-color:#05a081 !important;
+    border: none !important;
+  }
